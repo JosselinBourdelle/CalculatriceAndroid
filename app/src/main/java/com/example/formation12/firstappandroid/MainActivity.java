@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         Log.d("formation", "Création de MainActivity");
 
@@ -66,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_equal).setOnClickListener(onEqualClicked);
         textView = findViewById(R.id.textView);
         info = (Button)findViewById(R.id.button_info);
+
+        if(savedInstanceState!=null){
+            String getBundle = savedInstanceState.getString("textView");
+            textView.setText(getBundle);
+            Toast.makeText(MainActivity.this, getBundle, Toast.LENGTH_LONG).show();
+        }
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -182,5 +191,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString("textView", textView.getText().toString());
+
+    }
 }
 
