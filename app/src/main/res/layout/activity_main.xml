@@ -5,17 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/darkgray"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/button_info"
             android:layout_height="match_parent"
-            android:text="C"
-            android:id="@+id/button_clear" />
+            android:layout_width="match_parent"
+            android:text="info"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:background="@drawable/operator_button">
+        </Button>
 
         <TextView
             android:layout_width="match_parent"
@@ -24,14 +31,18 @@
             android:layout_margin="10dp"
             android:textSize="50sp"
             android:textAlignment="viewEnd"
-            android:id="@+id/textView"/>
+            android:id="@+id/textView"
+            android:textColor="@color/white"
+            android:layout_weight="0.4"/>
     </LinearLayout>
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnCount="4"
-        android:rowCount="4">
+        android:rowCount="4"
+        android:layout_margin="10dp"
+        >
         <Button
             android:id="@+id/button_zero"
             android:layout_row="3"
@@ -40,7 +51,9 @@
             android:layout_columnWeight="1"
             android:text="0"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            
+            android:textColor="@color/white"
+            android:background="@drawable/operator_button">
         </Button>
 
         <Button
@@ -50,8 +63,9 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:text="1"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -61,8 +75,9 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:text="2"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -72,8 +87,9 @@
             android:layout_column="2"
             android:layout_columnWeight="1"
             android:text="3"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -83,8 +99,9 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:text="4"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -94,8 +111,9 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:text="5"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -105,8 +123,9 @@
             android:layout_column="2"
             android:layout_columnWeight="1"
             android:text="6"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -116,8 +135,9 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:text="7"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -127,8 +147,9 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:text="8"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -138,8 +159,9 @@
             android:layout_column="2"
             android:layout_columnWeight="1"
             android:text="9"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -149,8 +171,9 @@
             android:layout_column="3"
             android:layout_columnWeight="1"
             android:text="+"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -160,8 +183,9 @@
             android:layout_column="3"
             android:layout_columnWeight="1"
             android:text="-"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -171,8 +195,10 @@
             android:layout_column="3"
             android:layout_columnWeight="1"
             android:text="/"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:maxWidth="50dp"
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -182,8 +208,9 @@
             android:layout_column="3"
             android:layout_columnWeight="1"
             android:text="*"
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -193,8 +220,9 @@
             android:layout_column="2"
             android:layout_columnWeight="1"
             android:text="."
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp">
+            android:textColor="@color/white">
         </Button>
 
         <Button
@@ -204,8 +232,9 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:text="="
+            android:background="@drawable/operator_button"
             android:textSize="30sp"
-            tools:textSize="12sp"
+            android:textColor="@color/white"
             >
         </Button>
 

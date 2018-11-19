@@ -1,5 +1,7 @@
 package com.example.formation12.firstappandroid;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +13,8 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    Button info;
     private TextView textView;
     private boolean remiseAzero = true;
     private String number1 = "", number2 = "", operation = "";
@@ -37,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
                 chooseOperator(clickedButton.getText().toString());
             }
         };
-
         View.OnClickListener onEqualClicked = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calculateTotal();
             }
         };
+
         findViewById(R.id.button_zero).setOnClickListener(onDigitClicked);
         findViewById(R.id.button_one).setOnClickListener(onDigitClicked);
         findViewById(R.id.button_two).setOnClickListener(onDigitClicked);
@@ -61,6 +65,17 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_dot).setOnClickListener(onDigitClicked);
         findViewById(R.id.button_equal).setOnClickListener(onEqualClicked);
         textView = findViewById(R.id.textView);
+        info = (Button)findViewById(R.id.button_info);
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
+
+
     }
 
     private void calculateTotal() {
