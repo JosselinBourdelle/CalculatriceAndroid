@@ -24,6 +24,33 @@
             android:textSize="30dp"
             android:layout_margin="30dp"
             android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1.8">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:src="@drawable/telephone"
+                android:scaleType="fitCenter"
+                android:id="@+id/img_button_tel"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:src="@drawable/mail"
+                android:scaleType="fitCenter"
+                android:id="@+id/img_button_mail"/>
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
